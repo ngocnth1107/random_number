@@ -27,26 +27,6 @@ const FormKQXS = ({ kqxs }) => {
     .padStart(2, "0")}/${date.getFullYear()}`;
 
   const serverDate = `${weekday} ${formattedDate}`;
-  const giaiArr = [
-    "giaidb",
-    "giai1",
-    "giai2",
-    "giai5",
-    "giai7",
-    "giai8",
-    "giai3_1",
-    "giai3_2",
-    "giai4_1",
-    "giai4_2",
-    "giai4_3",
-    "giai4_4",
-    "giai4_5",
-    "giai4_6",
-    "giai4_7",
-    "giai6_1",
-    "giai6_2",
-    "giai6_3",
-  ];
 
   const timeNow = Date.now();
   const [formVisible, setFormVisible] = useState(false);
@@ -260,8 +240,8 @@ const FormKQXS = ({ kqxs }) => {
     (giai: string) => {
       return (
         dataApi?.[giai] &&
-        dataApi.currentLoading === giai &&
-        +dataApi.expirationTime >= timeNow
+        dataApi?.currentLoading === giai &&
+        +dataApi?.expirationTime >= timeNow
       );
     },
     [dataApi, timeNow]
@@ -694,7 +674,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giaidb
+                                                                          dataApi?.giaidb
                                                                         }
                                                                       </div>
                                                                     )}
@@ -737,7 +717,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai1
+                                                                          dataApi?.giai1
                                                                         }
                                                                       </div>
                                                                     )}
@@ -781,7 +761,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai2
+                                                                          dataApi?.giai2
                                                                         }
                                                                       </div>
                                                                     )}
@@ -827,7 +807,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai3_1
+                                                                          dataApi?.giai3_1
                                                                         }
                                                                       </div>
                                                                     )}
@@ -864,7 +844,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai3_2
+                                                                          dataApi?.giai3_2
                                                                         }
                                                                       </div>
                                                                     )}
@@ -910,7 +890,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_1
+                                                                          dataApi?.giai4_1
                                                                         }
                                                                       </div>
                                                                     )}
@@ -947,7 +927,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_2
+                                                                          dataApi?.giai4_2
                                                                         }
                                                                       </div>
                                                                     )}
@@ -984,7 +964,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_3
+                                                                          dataApi?.giai4_3
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1020,7 +1000,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_4
+                                                                          dataApi?.giai4_4
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1056,7 +1036,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_5
+                                                                          dataApi?.giai4_5
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1092,7 +1072,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_6
+                                                                          dataApi?.giai4_6
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1128,7 +1108,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai4_7
+                                                                          dataApi?.giai4_7
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1171,7 +1151,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai5
+                                                                          dataApi?.giai5
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1215,7 +1195,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai6_1
+                                                                          dataApi?.giai6_1
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1251,7 +1231,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai6_2
+                                                                          dataApi?.giai6_2
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1287,7 +1267,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai6_3
+                                                                          dataApi?.giai6_3
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1330,7 +1310,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai7
+                                                                          dataApi?.giai7
                                                                         }
                                                                       </div>
                                                                     )}
@@ -1373,7 +1353,7 @@ const FormKQXS = ({ kqxs }) => {
                                                                         }}
                                                                       >
                                                                         {
-                                                                          dataApi.giai8
+                                                                          dataApi?.giai8
                                                                         }
                                                                       </div>
                                                                     )}
