@@ -1,0 +1,36 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Kqxs {
+  id               String     @default(cuid()) @id
+  giaidb           String?
+  giai1            String?
+  giai2            String?
+  giai3_1          String?
+  giai3_2          String?
+  giai3_3          String?
+  giai4_1          String?
+  giai4_2          String?
+  giai4_3          String?
+  giai4_4          String?
+  giai4_5          String?
+  giai4_6          String?
+  giai4_7          String?
+  giai5            String?
+  giai6_1          String?
+  giai6_2          String?
+  giai6_3          String?
+  giai7            String?
+  giai8            String?
+  expirationTime   String?
+  currentLoading   String?
+}
