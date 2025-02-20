@@ -9,6 +9,12 @@ export const getStaticProps: GetStaticProps = async () => {
     where: { id: '1' },
   });
 
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       post,
@@ -17,8 +23,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Blog = ({ post }) => {
-  console.log("post", post)
-
   return (
     <Layout>
       <FormKQXS kqxs={post} />
