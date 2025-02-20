@@ -219,7 +219,42 @@ const FormKQXS = ({ kqxs }) => {
     }
   };
 
-  const resetResult = () => {
+  const resetResult = async () => {
+    const data = {
+      giaidb: '',
+      giai1: '',
+      giai2: '',
+      giai3_1: '',
+      giai3_2: '',
+      giai4_1: '',
+      giai4_2: '',
+      giai4_3: '',
+      giai4_4: '',
+      giai4_5: '',
+      giai4_6: '',
+      giai4_7: '',
+      giai5: '',
+      giai6_1: '',
+      giai6_2: '',
+      giai6_3: '',
+      giai7: '',
+      giai8: '',
+      expirationTime: '',
+      currentLoading: '',
+    };
+
+    setDataApi(data);
+
+    const body = data;
+    try {
+      await fetch("/api/kqxs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+    } catch (error) {
+      console.error(error);
+    }
     setFormState({
       giai: "",
       giai3: "",

@@ -5,7 +5,7 @@ import prisma from '../lib/prisma';
 import FormKQXS from "./detail";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const post = await prisma.kqxs.findUnique({
+  const post = await prisma?.kqxs?.findUnique({
     where: { id: '1' },
   });
 
